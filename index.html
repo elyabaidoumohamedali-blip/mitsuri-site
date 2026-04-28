@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Candidature Mitsuri</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0a0a0a;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: black;
+}
+nav button {
+    background: none;
+    border: none;
+    color: pink;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* SECTIONS */
+.page {
+    display: none;
+    padding: 40px;
+}
+.active {
+    display: block;
+}
+
+/* TITRE */
+h1 {
+    text-align: center;
+    color: pink;
+}
+
+/* CARTES */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    background: #111;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px pink;
+}
+.card h3 {
+    color: pink;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<button onclick="showPage('home')">Accueil</button>
+<button onclick="showPage('histoire')">Histoire</button>
+<button onclick="showPage('rp')">RP</button>
+<button onclick="showPage('hrp')">HRP</button>
+<button onclick="showPage('events')">Events</button>
+</nav>
+
+<!-- ACCUEIL -->
+<div id="home" class="page active">
+<h1>Candidature Mitsuri</h1>
+
+<div class="container">
+
+<div class="card" onclick="showPage('histoire')">
+<h3>Histoire</h3>
+<p>Découvrir la vie de Mitsuri</p>
+</div>
+
+<div class="card" onclick="showPage('rp')">
+<h3>RP</h3>
+<p>Mes expériences</p>
+</div>
+
+<div class="card" onclick="showPage('hrp')">
+<h3>HRP</h3>
+<p>Présentation IRL</p>
+</div>
+
+<div class="card" onclick="showPage('events')">
+<h3>Events</h3>
+<p>Mes idées uniques</p>
+</div>
+
+</div>
+</div>
+
+<!-- HISTOIRE -->
+<div id="histoire" class="page">
+<h1>Histoire de Mitsuri</h1>
+<p>
+Mitsuri Kanroji est une jeune femme au cœur immense, connue pour sa gentillesse et sa sensibilité...
+Elle possède une force anormale depuis son enfance, ce qui la rend différente des autres...
+(👉 colle ici le gros texte que je t’ai donné)
+</p>
+</div>
+
+<!-- RP -->
+<div id="rp" class="page">
+<h1>Expérience RP</h1>
+<p>
+J’ai participé à de nombreux roleplay où j’ai développé ma capacité à jouer des émotions...
+Je suis capable d’interpréter des scènes sérieuses comme des scènes humoristiques...
+</p>
+</div>
+
+<!-- HRP -->
+<div id="hrp" class="page">
+<h1>Présentation HRP</h1>
+<p>
+Je m'appelle Mohamed Ali, j'ai 16 ans et je suis passionné de roleplay...
+Je cherche à incarner Mitsuri avec fidélité et émotion...
+</p>
+</div>
+
+<!-- EVENTS -->
+<div id="events" class="page">
+<h1>Idées d'Events</h1>
+<p>
+- Chasse au gâteau RP 🍰<br>
+- Course en sac 🥔<br>
+- Test d’amour 💕<br>
+- Entraînement Mitsuri ⚔️
+</p>
+</div>
+
+<script>
+function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
